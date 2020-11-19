@@ -12,6 +12,11 @@ To start the service execute following command in the project root directory
 
 `mvnw spring-boot:run`
 
+## Frontend 
+
+The frontend will be hosted alongside the restservice within a static html page using javascript.
+It can be visited under http://localhost:8080
+
 ## Requests
 
 Below you find the curl commands to execute the rest api. Note that I developed and tested under Windows (Powershell), therefor the double quotes
