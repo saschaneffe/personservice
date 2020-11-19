@@ -1,0 +1,55 @@
+# Get all persons
+GET http://localhost:8080/person
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+# Get a single person by id
+GET http://localhost:8080/person/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+# Add a new person
+POST http://localhost:8080/person
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "firstName": "Max",
+  "lastName": "Mustermann",
+  "size": 180,
+  "weight": 80.6,
+  "gender": "Male",
+  "birthday": "2000-03-15"
+}
+
+###
+
+# Update the person having the id appended to url
+PUT http://localhost:8080/person/1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "firstName": "Erika",
+  "lastName": "Mustermann",
+  "gender": "Female",
+  "size": 160,
+  "weight": 60,
+  "birthday": "2002-06-27"
+}
+
+
+###
+
+# Delete the person having the id appended to url
+DELETE http://localhost:8080/person/1
+Accept: */*
+Cache-Control: no-cache
+
+

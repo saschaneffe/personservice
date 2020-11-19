@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -31,8 +32,7 @@ public class Person {
 
     private Gender gender;
 
-    @NotNull
-    private Date birthday;
+    private LocalDate birthday;
 
     public static PersonBuilder create(String firstName, String lastName) {
         return new PersonBuilder(firstName, lastName);
@@ -86,11 +86,11 @@ public class Person {
         this.gender = gender;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 

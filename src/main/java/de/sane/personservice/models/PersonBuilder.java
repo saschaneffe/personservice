@@ -1,5 +1,6 @@
 package de.sane.personservice.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class PersonBuilder {
@@ -14,7 +15,7 @@ public class PersonBuilder {
 
     private Gender gender;
 
-    private Date birthday;
+    private LocalDate birthday;
 
     public PersonBuilder(String firstName, String lastName) {
         this.firstName = firstName;
@@ -36,7 +37,7 @@ public class PersonBuilder {
         return this;
     }
 
-    public PersonBuilder birthday(Date birthday) {
+    public PersonBuilder birthday(LocalDate birthday) {
         this.birthday = birthday;
         return this;
     }
