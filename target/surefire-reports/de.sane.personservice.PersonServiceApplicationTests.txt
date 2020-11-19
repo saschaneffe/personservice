@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: de.sane.personservice.PersonServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.671 s <<< FAILURE! - in de.sane.personservice.PersonServiceApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': Could not bind properties to 'JpaProperties' : prefix=spring.jpa, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.jpa.database' to org.springframework.orm.jpa.vendor.Database
+Caused by: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': Could not bind properties to 'JpaProperties' : prefix=spring.jpa, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.jpa.database' to org.springframework.orm.jpa.vendor.Database
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.jpa.database' to org.springframework.orm.jpa.vendor.Database
+Caused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [org.springframework.orm.jpa.vendor.Database] for value 'org.hibernate.dialect.PostgreSQLDialect'; nested exception is java.lang.IllegalArgumentException: No enum constant org.springframework.orm.jpa.vendor.Database.org.hibernate.dialect.PostgreSQLDialect
+Caused by: java.lang.IllegalArgumentException: No enum constant org.springframework.orm.jpa.vendor.Database.org.hibernate.dialect.PostgreSQLDialect
+

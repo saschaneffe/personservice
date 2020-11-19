@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: de.sane.personservice.controller.PersonControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.397 s <<< FAILURE! - in de.sane.personservice.controller.PersonControllerTest
+whenCallGetAll_noPersonShouldBeReturned  Time elapsed: 0.531 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at de.sane.personservice.controller.PersonControllerTest.whenCallGetAll_noPersonShouldBeReturned(PersonControllerTest.java:22)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at de.sane.personservice.controller.PersonControllerTest.whenCallGetAll_noPersonShouldBeReturned(PersonControllerTest.java:22)
+Caused by: org.postgresql.util.PSQLException: 
+ERROR: relation "person" does not exist
+  Position: 72
+	at de.sane.personservice.controller.PersonControllerTest.whenCallGetAll_noPersonShouldBeReturned(PersonControllerTest.java:22)
+

@@ -1,0 +1,4 @@
+de\sane\personservice\repositories\PersonRepository.class
+de\sane\personservice\controller\PersonController.class
+de\sane\personservice\models\Person.class
+de\sane\personservice\PersonServiceApplication.class
